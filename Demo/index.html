@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Speech-To-Text-Converter</title>
+<title>Audio Processor</title>
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" />
 		<style type="text/css">
 			body{
@@ -52,21 +52,24 @@
 		</style>
 </head>
    <body>
-   	<center><img class="center" src="http://scanta.io/wp-content/uploads/2019/10/imggg.png"></center>
-  <h1 align="center"><span style="color: #ff7e00">Speech to Text Converter </span><br><span style="font-size: 15px;color: black; font-weight: lighter;"></span></h1>
-  <center>Converting Speech Input To Text</center></br>
+  <h1 align="center"><span style="color: #ff7e00"> AUDIO TO TEXT CONVERTER</span><br><span style="font-size: 15px;color: black; font-weight: lighter;"></span></h1>
+  <center>Click on the Audio Button to get Started</center></br>
 
 		<div id="result" align="center">
-			<br>
-		 <label style="font-size: 15px; color: black">Speech Input:</label>
-      <form action = "http://localhost:5000/result" method = "POST">
-        <input type="text" id="result1" size="40" maxlength=100 name = "Name" /></br>
-<br>
-        <button type = "button" style="position:absolute; left:48%;" onclick="startConverting();"><i class="fa fa-microphone"></i></button>
+			<button type = "button" style="position:absolute; left:48%;" onclick="startConverting();"><i class="fa fa-microphone"></i></button>
 		<!-- click this button to stop converting-->
 		<button type = "button" style="position:absolute; left:51%;" onclick="stopConverting();"><i class="fa fa-remove"></i></button>
+		
+		<br>
+		<label style="font-size: 15px; color: black">Transcribed Text</label>
+        <form action = "http://localhost:5000/result" method = "POST">
+        
+		<input style="width: 100%;height: 150px;" type="text" id="result1" size="90" maxlength=100 name = "Name" />
+
+		</br>
+		<br>
+
 	</br>
-         <p><input type = "submit" value = "submit" /></p>
       </form>
       
 		<script type="text/javascript">
@@ -114,6 +117,5 @@
 		</script>
 		<br>
     </br>
-    <p style="text-align: center; color: #ea5703">© Scanta | All rights reseved</p>
    </body>
 </html>
